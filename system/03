@@ -1,0 +1,5 @@
+1) Open /etc/hostname in text editor and
+change your current hostname to a new one.
+2) Open /etc/hosts in text editor and
+change all your old hostnames to a new one(usually on the second line).
+3) Reboot the system.

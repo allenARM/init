@@ -1,0 +1,16 @@
+lastUpdate=`md5sum /etc/.crontab_backup | awk '{print $1}'`
+now=`md5sum /etc/crontab | awk '{print $1}'`
+
+if [ "$lastUpdate" != "$now"]
+then
+	echo "NOTEQUAL" | mail -s "file modified" root < ./modified.txt
+# ./modified.txt file with text "File crontab has been modified"
+else
+	echo "EQUAL"
+rm /etc/.crontab_backup
+cp /etc/crontab /etc/.crontab_backup
+
+# to schedule update && upgrade once a week:
+# 1) open "crontab -e"
+# 2) append line below
+# "0 0 * * * sh ~/kradetya.sh"

@@ -1,0 +1,4 @@
+Since I cannot change 'hosts' file, because of permissions
+I am unable to reroute intra.42.fr to 46.19.122.85 address
+If I could I would add this line "46.19.122.85	intra.42.fr".
+Which would redirect my calls from intra.42.fr to 46.19.122.85.

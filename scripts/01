@@ -1,0 +1,1 @@
+cat /etc/passwd | awk '{split($0, a, ":"); printf("%-20s\t%s\t%s\n", a[1], a[3], a[7])}'

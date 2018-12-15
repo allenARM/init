@@ -1,0 +1,7 @@
+#create .sh file and add this line
+(date && apt-get -q update && apt-get -qy upgrade) >> /var/log/update_script.log
+# line above will append to the file with date
+# to schedule update && upgrade once a week:
+# 1) open "crontab -e"
+# 2) append line below
+# "0 4 * * 1 sh ~/updater.sh"
